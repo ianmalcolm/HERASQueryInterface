@@ -1,0 +1,194 @@
+/*
+   Theme Name: HERA Style
+   Theme URI: http://aplinsc/
+Description: This is a child theme of 2015
+Author: Tian Huang
+Author URI: http://ianbox.net
+Template: twentyfifteen
+Version: 0.1
+ */
+
+@import url("../twentyfifteen/style.css");
+
+ul.docs{
+        font-size: 90%;
+}
+
+table.zarray, table.zarray th, table.zarray tr, table.zarray td,
+table.sarray, table.sarray th, table.sarray tr, table.sarray td,
+table.s4p, table.s4p th, table.s4p tr, table.s4p td,
+table.z4p, table.z4p th, table.z4p tr, table.z4p td{
+	padding:0.2em;
+	border:none;
+}
+
+table.z4p{
+	display:none;
+}
+
+table.s4p .mat{
+	display:none;
+}
+
+th, td {
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+table.s4p td.mag,
+table.s4p td.pha,
+table.s4p td.maph,
+table.s4p td.real,
+table.s4p td.imag,
+table.s4p td.reim,
+table.s4p td.down,
+table.s4p th.mag,
+table.s4p th.pha,
+table.s4p th.maph,
+table.s4p th.real,
+table.s4p th.imag,
+table.s4p th.reim,
+table.s4p th.down {
+	width:10%;
+}
+
+form.entry-content {
+	padding-bottom:5%;
+}
+
+table.button th,
+table.button td{
+	width:10%;
+}
+
+table.button, table.button th, table.button tr, table.button td {
+	padding:0.2em;
+	border:none;
+}
+
+.hentry, .page-header, .page-content{
+	margin:0 5%;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	margin:5px;
+}
+
+ /* Style the Image Used to Trigger the Modal */
+.s4pimg {
+    /*border-radius: 5px;*/
+    cursor: pointer;
+    /*transition: 0.3s;*/
+    text-align: center;
+    vertical-align: middle;
+}
+
+.s4pimg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+
+/* Modal Content (Image) */
+#myModalContent {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    /*max-width: 700px;*/
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#myModalCaption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+#myModalContent, #myModalCaption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.3s;
+    animation-name: zoom;
+    animation-duration: 0.3s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+#myModalClose {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#myModalClose:hover,
+#myModalClose:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    #myModalContent {
+        width: 100%;
+    }
+} 
+
+.loader {
+  border: 1em solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 1em solid #3498db;
+  border-bottom: 1em solid #3498db;
+  width: 6em;
+  height: 6em;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  left: 50%;
+  margin-left: -3em;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
