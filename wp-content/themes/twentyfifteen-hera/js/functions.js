@@ -75,21 +75,30 @@ function plot() {
 		return;
 	}
 
-	var newWindow = window.open("/plot","Plot");
+	plotForm(files);
+}
 
-	jQuery.ajax({
-		type: 'POST',
-		url: '/plot',
-		data: {'reqs':JSON.stringify(files)},
-		success: function(response) {
-			//window.open().document.write(response);
-			var imgDiv = jQuery(newWindow.document.body).find("#myImgDiv").get(0);
-			jQuery(imgDiv).html(jQuery(jQuery.parseHTML(response)).find('.s4pimg'))
-		},
-		error: function(error) {
-			console.log(error);
-		}
-        });
+function plotForm(requests) {
+
+	var form = document.createElement("form");
+	form.setAttribute("method", "POST");
+	form.setAttribute("target", "_blank");
+	form.setAttribute("action", "/plot");
+	
+	//Move the submit function to another variable
+	//so that it doesn't get overwritten.
+	form._submit_function_ = form.submit;
+	
+	var hiddenField = document.createElement("input");
+	hiddenField.setAttribute("type", "hidden");
+	hiddenField.setAttribute("name", "reqs");
+	hiddenField.setAttribute("value", JSON.stringify(requests));
+	
+	form.appendChild(hiddenField);
+
+	document.body.appendChild(form);
+	form._submit_function_();
+
 }
 
 function showModal(img) {

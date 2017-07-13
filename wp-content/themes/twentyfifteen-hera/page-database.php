@@ -27,13 +27,13 @@ get_header(); ?>
 				echo 'Here you can download or plot the standard 4-port s-parameter data for any of the PAM-75 modules.  Each module has a barcode and a serial number.  The serial numbers are 751YY for the PAMs.';
 				echo '<br>';
 				echo '<br>';
-				echo 'Search S parameter files (for batch return enter e.g. 751*, which will return the files for all PAMs):';
+				echo 'Search S parameter files (for batch return enter e.g. *751*, which will return the files for all PAMs):';
 			} else if ($_GET['type']=='fem') {
 				echo '<h2>FEM Database</h2>';
 				echo 'Here you can download or plot the standard 3-port s-parameter data for any of the FEM-75 modules.  Each module has a barcode and a serial number.  The serial numbers are 750XX for the FEMs.';
 				echo '<br>';
 				echo '<br>';
-				echo 'Search S parameter files (for batch return enter e.g. 750*, which will return the files for all FEMs):';
+				echo 'Search S parameter files (for batch return enter e.g. *750*, which will return the files for all FEMs):';
 			}
 		?>
 		<br>
